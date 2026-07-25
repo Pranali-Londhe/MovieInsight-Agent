@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import streamlit as st
 
 from langchain_core.prompts import ChatPromptTemplate
@@ -9,8 +8,8 @@ from pydantic import BaseModel
 from typing import List, Optional
 
 
-# Load Environment Variables
-load_dotenv()
+# Load API Key from Streamlit Secrets
+api_key = st.secrets["MISTRAL_API_KEY"]
 
 
 # ---------------- Movie Schema ---------------- #
